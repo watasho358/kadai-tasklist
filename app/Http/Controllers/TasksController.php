@@ -8,7 +8,6 @@ use App\Task;    // 追加
 
 class TasksController extends Controller
 {
-    // getでmessages/にアクセスされた場合の「一覧表示処理」
     public function index()
     {
         $tasks = Task::all();
@@ -18,7 +17,6 @@ class TasksController extends Controller
         ]);
     }
 
-    // getでmessages/createにアクセスされた場合の「新規登録画面表示処理」
     public function create()
     {
         $task = new Task;
@@ -28,7 +26,6 @@ class TasksController extends Controller
         ]);
     }
 
-    // postでmessages/にアクセスされた場合の「新規登録処理」
     public function store(Request $request)
     {
         $task = new Task;
@@ -38,7 +35,6 @@ class TasksController extends Controller
         return redirect('/');
     }
 
-    // getでmessages/idにアクセスされた場合の「取得表示処理」
     public function show($id)
      {
         $task = Task::find($id);
@@ -48,7 +44,6 @@ class TasksController extends Controller
         ]);
     }
 
-    // getでmessages/id/editにアクセスされた場合の「更新画面表示処理」
     public function edit($id)
     {
         $task = Task::find($id);
@@ -58,7 +53,6 @@ class TasksController extends Controller
         ]);
     }
 
-    // putまたはpatchでmessages/idにアクセスされた場合の「更新処理」
     public function update(Request $request, $id)
     {
         $task = Task::find($id);
@@ -68,7 +62,6 @@ class TasksController extends Controller
         return redirect('/');
     }
 
-    // deleteでmessages/idにアクセスされた場合の「削除処理」
     public function destroy($id)
     {
         $task = Task::find($id);
