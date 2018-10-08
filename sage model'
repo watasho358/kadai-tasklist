@@ -1,0 +1,13 @@
+[1mdiff --git a/app/Providers/AppServiceProvider.php b/app/Providers/AppServiceProvider.php[m
+[1mindex 35471f6..7165095 100644[m
+[1m--- a/app/Providers/AppServiceProvider.php[m
+[1m+++ b/app/Providers/AppServiceProvider.php[m
+[36m@@ -13,7 +13,7 @@[m [mclass AppServiceProvider extends ServiceProvider[m
+      */[m
+     public function boot()[m
+     {[m
+[31m-        //[m
+[32m+[m[32m        \Schema::defaultStringLength(191);[m
+     }[m
+ [m
+     /**[m
